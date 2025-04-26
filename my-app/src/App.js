@@ -6,7 +6,6 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        {/* Add other routes like /forum if needed */}
       </Routes>
     </Router>
   );

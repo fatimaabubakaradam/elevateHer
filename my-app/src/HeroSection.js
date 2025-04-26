@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
-import women from "./assets/women.png"; // ✅ Make sure this path is correct
+import women from "./assets/women.png"; 
 import FeaturedGrantsSection from "./FeaturedGrantsSection";
 
 const HeroSection = () => {
@@ -22,7 +22,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* ✅ Properly included */}
       <FeaturedGrantsSection />
     </div>
   );

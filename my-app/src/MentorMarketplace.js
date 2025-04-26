@@ -4,7 +4,6 @@ import './MentorMarketplace.css';
 function MentorMarketplace() {
   return (
     <div className="container">
-      {/* Meet the Mentors Section */}
       <div className="section">
         <h2>Meet the Mentors</h2>
         <div className="box-row">

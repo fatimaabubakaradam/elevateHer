@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
-import HeroSection from "./HeroSection"; // ✅ import Hero here
+import HeroSection from "./HeroSection"; 
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -50,7 +50,6 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Other nav links */}
           <Link to="/apply-grant" className="navbar-link">
             Apply for Grant
           </Link>
@@ -66,7 +65,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ✅ HeroSection rendered inside Navbar */}
       <HeroSection />
     </div>
   );
