@@ -1,6 +1,5 @@
 import React from "react";
 import "./SuccessStorySection.css";
-import MentorMarketplace from './MentorMarketplace';
 
 const SuccessStorySection = () => {
   return (
@@ -30,7 +29,6 @@ const SuccessStorySection = () => {
         </div>
       </div>
 
-      <MentorMarketplace />
     </section>
   );
 };

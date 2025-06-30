@@ -1,7 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
 import women from "./assets/women.png"; 
-import FeaturedGrantsSection from "./FeaturedGrantsSection";
 
 const HeroSection = () => {
   return (
@@ -22,7 +21,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <FeaturedGrantsSection />
     </div>
   );
 };

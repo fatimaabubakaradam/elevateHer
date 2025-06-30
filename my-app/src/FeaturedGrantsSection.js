@@ -1,6 +1,5 @@
 import React from "react";
 import "./FeaturedGrantsSection.css";
-import SuccessStorySection from "./SuccessStorySection";
 
 
 const FeaturedGrantsSection = () => {
@@ -24,7 +23,6 @@ const FeaturedGrantsSection = () => {
           <button className="apply-btn">Apply Now</button>
         </div>
       </div>
-      <SuccessStorySection />
 
     </section>
   );
