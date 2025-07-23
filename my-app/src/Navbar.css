@@ -1,0 +1,74 @@
+.navbar {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-link,
+.signup-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-link:hover,
+.signup-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+  background: rgb(244, 241, 241);
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-item {
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid #eee;
+  /* background: white; */
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f4ff;
+  color: #2575fc;
+}
+
+
