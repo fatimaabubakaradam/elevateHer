@@ -65,6 +65,9 @@ const Navbar = () => {
             <button className="close-btn" onClick={() => setMenuOpen(false)}>✕</button>
           </div>
           <div className="mobile-menu-content">
+                        <button onClick={() => handleNavigation("/")} className="mobile-menu-item">
+              Home
+            </button>
             <button onClick={() => handleNavigation("/signin-mentor")} className="mobile-menu-item">
               Sign in as Mentor
             </button>

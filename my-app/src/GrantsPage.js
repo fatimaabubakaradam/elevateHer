@@ -3,34 +3,60 @@ import './Signmentor.css'; // Reuse your existing styles
 import { FaHandHoldingUsd } from 'react-icons/fa';
 import Footer from './Footer';
 
-const sampleGrants = [
-  {
-    id: 1,
-    title: "SheLeads Business Grant 2025",
-    sponsor: "Women in Business Africa",
-    amount: "₦2,000,000",
-    deadline: "July 30, 2025",
-    description: "Supporting early-stage women entrepreneurs in retail and agribusiness."
-  },
-  {
-    id: 2,
-    title: "Digital Empowerment Grant",
-    sponsor: "TechWomen NG",
-    amount: "₦1,000,000",
-    deadline: "August 15, 2025",
-    description: "For women building tech-driven startups across Nigeria."
-  },
-  {
-    id: 3,
-    title: "ElevateHer Growth Fund",
-    sponsor: "ElevateHer",
-    amount: "₦500,000",
-    deadline: "Rolling",
-    description: "Micro-funding for registered ElevateHer entrepreneurs scaling up."
-  }
-];
+
 
 const GrantsPage = () => {
+   const fundingOpportunities = [
+    {
+      title: "Women in Tech Grant 2024",
+      organization: "Nigerian Tech Foundation",
+      description:
+        "Supporting women-led technology startups with funding and mentorship opportunities.",
+      amount: "₦5,000,000",
+      deadline: "March 15, 2024",
+      location: "Nationwide",
+      category: "Technology",
+      type: "Grant",
+      link: "https://example.com/apply-tech-grant",
+    },
+    {
+      title: "SME Development Fund",
+      organization: "Bank of Industry",
+      description:
+        "Low-interest loans for small and medium enterprises owned by women entrepreneurs.",
+      amount: "₦10,000,000",
+      deadline: "April 10, 2024",
+      location: "Nigeria",
+      category: "Business",
+      type: "Loan",
+      link: "https://example.com/apply-sme-loan",
+    },
+    {
+      title: "Agribusiness Support Grant",
+      organization: "Nigerian Agriculture Foundation",
+      description:
+        "Funds for women entrepreneurs in the agricultural sector.",
+      amount: "₦3,000,000",
+      deadline: "May 5, 2024",
+      location: "Rural Areas",
+      category: "Agriculture",
+      type: "Grant",
+      link: "https://example.com/apply-agribusiness",
+    },
+    {
+      title: "Creative Industry Loan",
+      organization: "Creative Nigeria",
+      description:
+        "Loans for women in fashion, film, and creative sectors.",
+      amount: "₦8,000,000",
+      deadline: "June 30, 2024",
+      location: "Urban Areas",
+      category: "Creative",
+      type: "Loan",
+      link: "https://example.com/apply-creative-loan",
+    },
+  ];
+
   return (
     <div className="signin-mentor-container">
       {/* Hero Section */}
@@ -60,31 +86,89 @@ const GrantsPage = () => {
           </div>
         </div>
       </div>
+ <div className="funding-header">
+      <div className="funding-badge">🔥 Funding & Grants</div>
 
-      {/* Grants Listing */}
-      <div className="signin-mentor-form-container">
-        <div className="signin-mentor-left">
-          <div className="signin-mentor-header">
-            <h2>Available Grants</h2>
-            <p>Browse and apply to funding that matches your business goals.</p>
-          </div>
+      <h1 className="funding-title">
+        Access <span>Funding Opportunities</span>
+      </h1>
 
-          <div className="grant-list">
-            {sampleGrants.map(grant => (
-              <div key={grant.id} className="grant-card">
-                <h3>{grant.title}</h3>
-                <p><strong>Sponsor:</strong> {grant.sponsor}</p>
-                <p><strong>Amount:</strong> {grant.amount}</p>
-                <p><strong>Deadline:</strong> {grant.deadline}</p>
-                <p>{grant.description}</p>
-                <button className="signin-button" onClick={() => alert('Redirect to apply form coming soon!')}>
-                  Apply Now
-                </button>
-              </div>
-            ))}
-          </div>
+      <p className="funding-description">
+        Discover grants, loans, and investment opportunities specifically designed
+        for women entrepreneurs in Nigeria.
+      </p>
+
+      <div className="funding-search">
+        <input
+          type="text"
+          placeholder="Search funding opportunities..."
+          className="funding-input"
+        />
+        <button className="funding-filter">Filter</button>
+        <button className="funding-search-btn">Search</button>
+      </div>
+    </div>
+     <div className="funding-list-container">
+      <div className="funding-stats">
+        <div>
+          <h2>₦2.5B+</h2>
+          <p>Total Available Funding</p>
+        </div>
+        <div>
+          <h2>150+</h2>
+          <p>Active Opportunities</p>
+        </div>
+        <div>
+          <h2>500+</h2>
+          <p>Women Funded</p>
+        </div>
+        <div>
+          <h2>85%</h2>
+          <p>Success Rate</p>
         </div>
       </div>
+
+      {fundingOpportunities.map((fund, index) => (
+        <div key={index} className="funding-card">
+          <div className="funding-card-header">
+            <h3>{fund.title}</h3>
+            <p>{fund.organization}</p>
+          </div>
+          <p className="funding-description">{fund.description}</p>
+          <div className="funding-details">
+            <span>{fund.amount}</span>
+            <span>{fund.deadline}</span>
+            <span>{fund.location}</span>
+            <span>{fund.category}</span>
+          </div>
+          <div className="funding-tags">
+            <span className="tag open">Open</span>
+            <span className="tag">{fund.type}</span>
+          </div>
+          <div className="funding-buttons">
+            <a href={fund.link} target="_blank" rel="noopener noreferrer">
+              <button className="apply-btn">Apply Now</button>
+            </a>
+            <button className="learn-btn">Learn More</button>
+          </div>
+        </div>
+      ))}
+    </div>
+     <div className="application-help-section">
+      <h2>Need Help with Your Application?</h2>
+      <p>
+        Our expert team can help you prepare winning funding applications and
+        connect you with the right opportunities.
+      </p>
+      <div className="application-help-buttons">
+        <button className="help-btn">Get Application Help</button>
+        <input
+          type="text"
+          placeholder="Enter your email"
+          className="email-input"
+        />
+      </div>
+    </div>
       <Footer />
     </div>
   );
